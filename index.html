@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/20bc52809b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Ph-LookUp</title>
+  </head>
+  <body class="relative bg-slate-900 text-green-600">
+    <header>
+      <nav
+        class="flex justify-between items-center sm:px-24 sm:py-10 px-8 py-8"
+      >
+        <a class="text-2xl" href="/"
+          ><i class="fa-solid fa-magnifying-glass"></i>
+          <span class="ml-4 font-serif">Ph-LookUp</span></a
+        >
+
+        <a class="text-2xl" href="https://github.com/Kei-K23" target="_blank">
+          <i class="fa-brands fa-github"></i> Kei-K</a
+        >
+      </nav>
+    </header>
+    <section class="mx-6 h-screen pb-10">
+      <div>
+        <h1
+          id="typing-text"
+          class="text-slate-400 text-center text-3xl lg:text-5xl font-mono max-w-[1200px] m-auto mt-8 mb-10"
+        >
+          Lookup Every
+          <span class="text-green-500 font-extrabold">Phone number!</span>
+
+          <div id="typing-cursor"></div>
+        </h1>
+        <p class="text-center text-xl font-serif">
+          You have to find the information about the phone number!
+        </p>
+        <br />
+        <p class="text-center text-lg lg:text-2xl font-serif text-slate-400">
+          eg. Select your country and enter phone number that you want to check
+          for validation
+        </p>
+      </div>
+      <div
+        class="py-4 px-8 bg-slate-100 w-full md:w-3/4 lg:w-3/5 xl:w-3/6 2xl:h-2/5 m-auto rounded-2xl mt-10"
+      >
+        <form id="form_submit">
+          <div class="w-full flex justify-start flex-col gap-2 mb-8">
+            <label for="code" class="text-xl">Select Country :</label>
+            <select
+              id="code"
+              name="code"
+              class="py-2 px-4 text-xl h-14 lg:h-16 bg-slate-900"
+            ></select>
+          </div>
+
+          <div class="flex justify-start flex-col gap-2 mb-8">
+            <label for="phone_number" class="text-xl"
+              >Enter phone number :</label
+            >
+            <input
+              type="number"
+              name="phone_number"
+              placeholder="enter phone number"
+              required
+              class="py-2 px-4 text-xl h-14 lg:h-16 focus:outline-0 bg-slate-900 focus:ring-2 focus:ring-green-800"
+            />
+          </div>
+          <button
+            id="search-btn"
+            class="px-4 py-2 w-full lg:w-2/6 border-2 border-slate-900 text-lg rounded-lg transition-colors duration-500 hover:bg-slate-900 hover:scale-95 active:bg-slate-950 active:scale-90 disabled:bg-slate-500"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i> Search
+            <i id="spinner-icon" class="fa-solid fa-spinner fa-spin hidden"></i>
+          </button>
+        </form>
+        <a
+          class="block mt-6 m-auto text-center underline hover:no-underline"
+          href="https://apilayer.com/"
+          >API used from APILayer</a
+        >
+      </div>
+    </section>
+
+    <section
+      id="placeholder_for-fetchData"
+      class="h-screen pt-[15rem] lg:pt-[6rem] hidden"
+    >
+      <div
+        class="flex justify-center items-center flex-col gap-4 py-8 px-8 bg-slate-100 w-full mt-10"
+      >
+        <h2 class="display_header text-2xl text-center mb-8"></h2>
+        <h3 class="valid text-xl">Valid: <b></b></h3>
+        <h3 class="carrier text-xl">Carrier: <b></b></h3>
+        <h3 class="country_name text-xl">Country Name: <b></b></h3>
+        <h3 class="international_format text-xl">
+          International format: <b></b>
+        </h3>
+        <h3 class="local_format text-xl">Local format: <b> </b></h3>
+        <h3 class="line_type text-xl">Line type: <b></b></h3>
+      </div>
+    </section>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
