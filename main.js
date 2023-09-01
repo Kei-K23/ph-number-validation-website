@@ -1,3 +1,4 @@
+import { API_KEY } from "./APIkey";
 import { COUNTRY_LIST } from "./phoneNumber";
 
 // select form element from DOM
@@ -8,7 +9,7 @@ const placeholder_for_fetchData = document.querySelector(
 );
 
 const header = new Headers();
-header.append("apikey", "ghXV2dbLAl3CshgWW7GXvWPSG4LhfnFR");
+header.append("apikey", API_KEY);
 
 const requestOptions = {
   method: "GET",
